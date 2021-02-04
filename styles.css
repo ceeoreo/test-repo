@@ -1,0 +1,168 @@
+body {
+    font-family: Raleway;
+    background-color: #2B9EB3;
+    color: #0B132B;
+    font-size: 17px;
+  }
+  
+  main {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+  
+  #intro {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-top: 100px;
+    font-family: 'Abril Fatface';
+    letter-spacing: 2px;
+    font-size: 30px;
+  }
+  
+  #piano-container {
+    margin: 25px 0 50px 0;
+    display: flex;
+    flex-flow: row column;
+    justify-content: center;
+  }
+  
+  .left-white, .right-white {
+    height: 150px;
+    width: 25px;
+    border-top: 1.5px solid #160801;
+    border-bottom: 1.5px solid #160801;
+    background-color: white;
+    transition: all 0.35s ease;
+  }
+  
+  .left-white::before {
+    width: 10px;
+    height: 75px;
+    background-color: white;
+    border-left: 2px solid #160801;
+    border-bottom: 1.5px solid #160801;
+    content: '';
+    position: absolute;
+    transform: translateX(-10px) translateY(75px);
+    border-bottom-left-radius: 5px;
+    transition: all 0.35s ease;
+  }
+  
+  .left-white:hover, .left-white:hover::before, .right-white:hover, .right-white:hover::after {
+    /*transform: scale(.95);*/
+    transition: all 0.35s ease;
+    background-color: #33FFFB;
+  }
+  
+  .right-white::after {
+     width: 10px;
+     height: 75px;
+     background-color: white;
+     border-right: 2px solid #160801;
+     border-bottom: 1.5px solid #160801;
+     content: '';
+     position: absolute;
+     transform: translateX(24px) translateY(75px);
+     border-bottom-right-radius: 5px;
+     transition: all 0.35s ease;
+  }
+
+  .border-left {
+    border-left: 1.5px solid #160801;
+    border-bottom-left-radius: 5px;
+  }
+  
+  .border-right{ 
+   border-bottom-right-radius: 5px;
+  }
+  
+  .black-key {
+    height: 75px;
+    width: 20px;
+    background-color: #0B132B;
+    border-top: 1.5px solid #0B132B;
+    transition: all 0.35s ease;
+  }
+  
+  .black-key:hover {
+    background-color: #33FFFB;
+    border-bottom: 1px solid  #33FFFB;
+    transition: all 0.35s ease;
+  }
+
+  #b-key {
+    border-right: 2px solid #160801;
+  }
+
+  
+  @media (min-width: 505px){
+    h1 {
+      font-size: 40px;
+    }
+    
+    p {
+      font-size: 21px;
+    }
+    
+    .left-white, .right-white {
+      height: 170px;
+      width: 40px;
+    }
+    
+    .left-white::before {
+      height: 85px;
+      width: 15px;
+      transform: translateX(-15px) translateY(85px);
+    }
+    
+    .right-white::after {
+      height: 85px;
+      width: 15px;
+      transform: translateX(40px) translateY(85px);
+    }
+    
+    .black-key {
+      height: 85px;
+      width: 30px;
+    }
+  }
+  
+  
+  @media (min-width: 875px) {
+    h1 {
+      font-size: 55px;
+    }
+    
+    p {
+      font-size: 25px;
+    }
+    
+    .left-white, .right-white {
+      height: 200px;
+      width: 50px;
+  
+    }
+    
+     .left-white::before {
+      height: 100px;
+      width: 20px;
+      transform: translateX(-20px) translateY(100px);
+    }
+    
+    .right-white::after {
+      height: 100px;
+      width: 20px;
+      transform: translateX(50px) translateY(100px);
+    }
+    
+    .black-key {
+      height: 100px;
+      width: 40px;
+    }
+  }
